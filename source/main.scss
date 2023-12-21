@@ -1,0 +1,31 @@
+@use 'config/reset';
+@use 'config/cores';
+
+@use 'secoes/cabecalho';
+@use 'secoes/produtos';
+
+
+body{
+    background-color: cores.$corDeFundo;
+}
+
+@media screen and (max-width: cores.$mobile){
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: cores.$tablet){
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
